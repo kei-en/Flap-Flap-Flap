@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     enum PageState
     {
-        None,
+         None,
          Start,
          Countdown,
          GameOver
@@ -80,6 +80,8 @@ public class GameManager : MonoBehaviour
         }
         SetPageState(PageState.GameOver);
     }
+
+    
 
     void SetPageState(PageState state)
     {

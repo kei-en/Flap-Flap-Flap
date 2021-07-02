@@ -4,16 +4,20 @@ ScriptsOnlyBuild:
     - CountdownText
     - GameManager
     - HighscoreText
+    - Menu
     - Parallaxer
     - TapController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -31,6 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -54,12 +59,18 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1486}
     - Class: 114
       Script: {instanceID: 1510}
+    - Class: 114
+      Script: {instanceID: 1656}
     - Class: 114
       Script: {instanceID: 2074}
     - Class: 114
@@ -80,6 +91,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3546}
     - Class: 114
       Script: {instanceID: 3912}
+    - Class: 114
+      Script: {instanceID: 16746}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -515,7 +528,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 1650e409b48d8e4fe401d40881503e2b
+      Hash: 0c2a3a0962f8821148c65adf265cf8d7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TapController
@@ -651,7 +664,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: cbc7f2cc83e6552319903b0028917696
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/K/Desktop/Flap Flap Flap.apk
+  playerPath: C:/Users/njugu/OneDrive/Desktop/Flap Flap Flap.apk

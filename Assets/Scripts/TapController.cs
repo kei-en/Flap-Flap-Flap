@@ -13,16 +13,15 @@ public class TapController : MonoBehaviour
     public float tiltSmooth = 5f;
 
     public Vector3 startPos;
-    //public AudioSource tapSound;
-    //public AudioSource scoreSound;
-    //public AudioSource dieSound;
+    public AudioSource tapSound;
+    public AudioSource scoreSound;
+    public AudioSource dieSound;
 
     private Rigidbody2D rigidBody;
     private Quaternion downRotation;
     private Quaternion forwardRotation;
 
     GameManager game;
-    //TrailRenderer trail;
 
     private void Start()
     {
@@ -31,8 +30,6 @@ public class TapController : MonoBehaviour
         forwardRotation = Quaternion.Euler(0, 0, 40);
         game = GameManager.Instance;
         rigidBody.simulated = false;
-        //trail = GetComponent<TrailRenderer>();
-        //trail.sortingOrder = 20;
     }
 
     private void OnEnable()
@@ -63,12 +60,12 @@ public class TapController : MonoBehaviour
     {
         if(game.GameOver) return;
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && Time.timeScale != 0)
         {
             rigidBody.velocity = Vector2.zero;
             transform.rotation = forwardRotation;
             rigidBody.AddForce(Vector2.up * tapForce, ForceMode2D.Force);
-            //tapSound.Play();
+            tapSound.Play();
         }
 
         transform.rotation = Quaternion.Lerp(transform.rotation, downRotation, tiltSmooth * Time.deltaTime);
@@ -79,13 +76,13 @@ public class TapController : MonoBehaviour
         if(col.gameObject.tag == "ScoreZone")
         {
             OnPlayerScored();
-            //scoreSound.Play();
+            scoreSound.Play();
         }
         if(col.gameObject.tag == "DeadZone")
         {
             rigidBody.simulated = false;
             OnPlayerDied();
-            //dieSound.Play();
+            dieSound.Play();
         }
     }
 }
